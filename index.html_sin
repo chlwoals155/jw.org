@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. 최재민</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('873af054cf6def72a41fa1939cc10bfd');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: 'ජේසුස් වහන්සේගේ මරණය සැමරීම',
+        description: '2023 අප්‍රේල් 4 අඟහරුවාදා',
+        imageUrl:
+          'https://assetsnffrgf-a.akamaihd.net/assets/m/1102023385/univ/art/1102023385_univ_cnt_2_lg.jpg',
+        link: {
+          mobileWebUrl: 'https://www.jw.org/si/%E0%B6%BA%E0%B7%99%E0%B7%84%E0%B7%9D%E0%B7%80%E0%B7%8F-%E0%B6%AF%E0%B7%99%E0%B7%80%E0%B7%92%E0%B6%9C%E0%B7%9A-%E0%B7%83%E0%B7%8F%E0%B6%9A%E0%B7%8A%E0%B7%82%E0%B7%92%E0%B6%9A%E0%B6%BB%E0%B7%94%E0%B7%80%E0%B6%B1%E0%B7%8A/%E0%B7%83%E0%B7%92%E0%B7%84%E0%B7%92-%E0%B6%9A%E0%B7%92%E0%B6%BB%E0%B7%93%E0%B6%B8/',
+          webUrl: 'https://www.jw.org/si/%E0%B6%BA%E0%B7%99%E0%B7%84%E0%B7%9D%E0%B7%80%E0%B7%8F-%E0%B6%AF%E0%B7%99%E0%B7%80%E0%B7%92%E0%B6%9C%E0%B7%9A-%E0%B7%83%E0%B7%8F%E0%B6%9A%E0%B7%8A%E0%B7%82%E0%B7%92%E0%B6%9A%E0%B6%BB%E0%B7%94%E0%B7%80%E0%B6%B1%E0%B7%8A/%E0%B7%83%E0%B7%92%E0%B7%84%E0%B7%92-%E0%B6%9A%E0%B7%92%E0%B6%BB%E0%B7%93%E0%B6%B8/',
+        },
+      },
+      social: {
+        likeCount: 좋아요 수, //99999가 최대입니다
+        commentCount: 댓글 수, //99999가 최대입니다
+        sharedCount: 공유 수, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: 'ඔබට උත්සවයකට ආරාධනා කර ඇත.',
+          link: {
+            mobileWebUrl: 'https://www.jw.org/si/%E0%B6%BA%E0%B7%99%E0%B7%84%E0%B7%9D%E0%B7%80%E0%B7%8F-%E0%B6%AF%E0%B7%99%E0%B7%80%E0%B7%92%E0%B6%9C%E0%B7%9A-%E0%B7%83%E0%B7%8F%E0%B6%9A%E0%B7%8A%E0%B7%82%E0%B7%92%E0%B6%9A%E0%B6%BB%E0%B7%94%E0%B7%80%E0%B6%B1%E0%B7%8A/%E0%B7%83%E0%B7%92%E0%B7%84%E0%B7%92-%E0%B6%9A%E0%B7%92%E0%B6%BB%E0%B7%93%E0%B6%B8/',
+            webUrl: 'https://www.jw.org/si/%E0%B6%BA%E0%B7%99%E0%B7%84%E0%B7%9D%E0%B7%80%E0%B7%8F-%E0%B6%AF%E0%B7%99%E0%B7%80%E0%B7%92%E0%B6%9C%E0%B7%9A-%E0%B7%83%E0%B7%8F%E0%B6%9A%E0%B7%8A%E0%B7%82%E0%B7%92%E0%B6%9A%E0%B6%BB%E0%B7%94%E0%B7%80%E0%B6%B1%E0%B7%8A/%E0%B7%83%E0%B7%92%E0%B7%84%E0%B7%92-%E0%B6%9A%E0%B7%92%E0%B6%BB%E0%B7%93%E0%B6%B8/',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
